@@ -21,10 +21,11 @@ public class PedirDatos {
         
         System.out.println("Nombre del estudiante: ");
         Es.setNom_estudiante(le.nextLine());
+      
         
         System.out.println("Apellidos del estudiante: ");
         Es.setApe_estudiante(le.nextLine());
-        
+      
         System.out.println("Edad del estudiante: ");
         Es.setEdad_estudiante(le.nextInt());
         

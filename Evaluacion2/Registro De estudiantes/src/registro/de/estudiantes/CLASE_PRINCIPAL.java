@@ -35,7 +35,7 @@ public class CLASE_PRINCIPAL {
                 Read read = new Read();
             }
             case "c": {
-                //Actualizar actu = new Actualizar();
+                Actualizar actu = new Actualizar();
             }
             case "d": {
                 //eliminar_reg Delete delete = new eliminar_reg();
