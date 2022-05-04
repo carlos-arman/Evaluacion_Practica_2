@@ -32,13 +32,13 @@ public class CLASE_PRINCIPAL {
                 PedirDatos pedir = new PedirDatos();
             }
             case "b": {
-                //Read read = new Read();
+                Read read = new Read();
             }
             case "c": {
-                //Update update = new Update();
+                //Actualizar actu = new Actualizar();
             }
             case "d": {
-                //Delete delete = new Delete();
+                //eliminar_reg Delete delete = new eliminar_reg();
             }
             case "e": System.exit(0);
             default: System.out.println(" Seleccion invalida! ");
