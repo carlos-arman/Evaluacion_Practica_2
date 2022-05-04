@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class PedirDatos {
     PedirDatos() throws SQLException{
+        //PEDIR DATOS AL USUARIO
         Scanner le = new Scanner(System.in);
         Datos_Estudiantes Es = new Datos_Estudiantes();
         System.out.println("Datos del estudiante");
@@ -26,5 +27,12 @@ public class PedirDatos {
         
         System.out.println("Edad del estudiante: ");
         Es.setEdad_estudiante(le.nextInt());
+        
+        String tabla = "estudiantes";
+        String camposTabla = "id_estudiante,carnet_estudiante,nom_estudiante,ape_estudiante,edad_estudiante";
+        String valoresCampo = "'" + Es.getId_estudiante() + "," + Es.getCarnet_estudiante() + "','" + Es.getNom_estudiante() + "','" + Es.getApe_estudiante() + "','" + Es.getEdad_estudiante();
+        
+        Cls_conexion con = new Cls_conexion();
+        
     }
 }

@@ -13,7 +13,7 @@ public class Datos_Estudiantes {
     /**
      * @param args the command line arguments
      */
-     private int id_estudiante;
+    private int id_estudiante;
     private int carnet_estudiante;
     private String nom_estudiante;
     private String ape_estudiante;
