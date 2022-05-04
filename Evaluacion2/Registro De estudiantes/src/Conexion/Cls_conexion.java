@@ -31,7 +31,7 @@ public class Cls_conexion{
         Cls_conexion conectar = new Cls_conexion();
         Connection cone = conectar.getConnection();
         try{
-            String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUE (" + valoresCampo +");";
+            String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUES (" + valoresCampo +");";
             Statement stmt;
             stmt = cone.createStatement();
             stmt.executeUpdate(sqlQueryStmt);
