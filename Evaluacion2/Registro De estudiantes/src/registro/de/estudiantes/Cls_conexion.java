@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package Conexion;
+package registro.de.estudiantes;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
