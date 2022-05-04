@@ -28,20 +28,20 @@ public class CLASE_PRINCIPAL {
 
         switch (MenuOp) {
 
-            case "a" -> {
+            case "a": {
                 //Create create = new Create();
             }
-            case "b" -> {
+            case "b": {
                 //Read read = new Read();
             }
-            case "c" -> {
+            case "c": {
                 //Update update = new Update();
             }
-            case "d" -> {
+            case "d": {
                 //Delete delete = new Delete();
             }
-            case "e" -> System.exit(0);
-            default -> System.out.println(" Seleccion invalida! ");
+            case "e": System.exit(0);
+            default: System.out.println(" Seleccion invalida! ");
         }
     }
 }
