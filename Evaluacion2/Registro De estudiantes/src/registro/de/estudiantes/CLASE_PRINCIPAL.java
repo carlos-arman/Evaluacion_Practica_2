@@ -29,7 +29,7 @@ public class CLASE_PRINCIPAL {
         switch (MenuOp) {
 
             case "a": {
-                //Create create = new Create();
+                PedirDatos pedir = new PedirDatos();
             }
             case "b": {
                 //Read read = new Read();
