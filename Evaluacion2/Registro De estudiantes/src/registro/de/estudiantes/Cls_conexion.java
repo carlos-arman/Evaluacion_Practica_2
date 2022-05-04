@@ -14,7 +14,7 @@ import java.sql.*;
 public class Cls_conexion{ 
     
     private final String servidor = "jdbc:mysql://localhost/registroestudiante";
-    private final String usuario = " root@localhost";
+    private final String usuario = "root";
     private final String clave = "";
     private final String driverConector = "com.mysql.jdbc.Driver";
     private static Connection conect;
