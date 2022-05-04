@@ -20,15 +20,18 @@ public class Cls_conexion{
     private static Connection conect;*/
     Connection conect;
     Statement stmt;
-    public Connection conexion(){
+    public Cls_conexion(){
         try{
             
             Class.forName("com.mysql.jdbc.Driver");
             conect = DriverManager.getConnection("jdbc:mysql://localhost/registroestudiante","root","");
         }catch (Exception e){
             System.out.println("Error de conexion! " + e.getMessage());
-        }return conect;
+        }
      
+    }
+    public Connection getConnection(){
+        return conect;
     }
     
    /* public Connection getConnection() {
@@ -37,7 +40,7 @@ public class Cls_conexion{
     
     public void guardarRegistros(String tabla, String camposTabla, String valoresCampos){
         Cls_conexion conectar = new Cls_conexion();
-        Connection cone = conectar.conexion();
+        Connection cone = conectar.getConnection();
         try{
             String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUES (" + valoresCampos +");";
             Statement stmt;
