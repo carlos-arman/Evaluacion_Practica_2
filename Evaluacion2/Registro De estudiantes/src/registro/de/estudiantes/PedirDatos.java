@@ -33,6 +33,7 @@ public class PedirDatos {
         String valoresCampo = "'" + Es.getId_estudiante() + "," + Es.getCarnet_estudiante() + "','" + Es.getNom_estudiante() + "','" + Es.getApe_estudiante() + "','" + Es.getEdad_estudiante();
         
         Cls_conexion con = new Cls_conexion();
+        con.guardarRegistros(tabla, camposTabla, valoresCampo);
         CLASE_PRINCIPAL.MenuDesplegable();
     }
 }
