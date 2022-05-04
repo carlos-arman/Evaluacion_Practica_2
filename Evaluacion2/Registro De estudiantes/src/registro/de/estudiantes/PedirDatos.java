@@ -21,6 +21,7 @@ public class PedirDatos {
         
         System.out.println("Nombre del estudiante: ");
         Es.setNom_estudiante(le.nextLine());
+        le.nextLine();
       
         
         System.out.println("Apellidos del estudiante: ");

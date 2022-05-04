@@ -5,7 +5,7 @@
 
 package registro.de.estudiantes;
 import java.sql.*;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -13,23 +13,31 @@ import javax.swing.JOptionPane;
  */
 public class Cls_conexion{ 
     
-    Connection conect = null;
+    /*private final String servidor = "jdbc:mysql://localhost/registroestudiante";
+    private final String usuario = " root@localhost";
+    private final String clave = "";
+    private final String driverConector = "com.mysql.jdbc.Driver";
+    private static Connection conect;*/
+    Connection conect;
+    Statement stmt;
     public Connection conexion(){
         try{
-            Class.forName("org.gjt.mm.mysql.Driver");
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/bd","root ", "");
+            
+            Class.forName("com.mysql.jdbc.Driver");
+            conect = DriverManager.getConnection("jdbc:mysql://localhost/registroestudiante","root","");
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null, "Error" + e);
-        }
-     return conect;
+            System.out.println("Error de conexion! " + e.getMessage());
+        }return conect;
+     
     }
-    public Connection getConnection() {
+    
+   /* public Connection getConnection() {
       return conect;
-    }
+    }*/
     
     public void guardarRegistros(String tabla, String camposTabla, String valoresCampo){
         Cls_conexion conectar = new Cls_conexion();
-        Connection cone = conectar.getConnection();
+        Connection cone = conectar.conexion();
         try{
             String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUES (" + valoresCampo +");";
             Statement stmt;
