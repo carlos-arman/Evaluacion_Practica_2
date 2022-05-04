@@ -14,7 +14,8 @@ public class Eliminar_reg {
         Cls_conexion utilerias = new Cls_conexion;
         System.out.println("<< ELIMINAR REGISTRO >>");
         
-        
+        System.out.println("Ingresar el id del registro");
+        String tabla = "tb_contacto"
     }
     
 }
