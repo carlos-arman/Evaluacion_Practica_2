@@ -13,18 +13,17 @@ import java.sql.*;
  */
 public class Cls_conexion{ 
     
-    /*private final String servidor = "jdbc:mysql://localhost/registroestudiante";
+    private final String servidor = "jdbc:mysql://localhost/registroestudiante";
     private final String usuario = " root@localhost";
     private final String clave = "";
     private final String driverConector = "com.mysql.jdbc.Driver";
-    private static Connection conect;*/
-    Connection conect;
-    Statement stmt;
+    private static Connection conect;
+   
     public Cls_conexion(){
         try{
             
-            Class.forName("com.mysql.jdbc.Driver");
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/registroestudiante","root","");
+            Class.forName(driverConector);
+            conect = DriverManager.getConnection(servidor, usuario, clave);
         }catch (Exception e){
             System.out.println("Error de conexion! " + e.getMessage());
         }
