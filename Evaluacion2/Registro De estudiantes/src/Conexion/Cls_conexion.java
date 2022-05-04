@@ -26,6 +26,23 @@ public class Cls_conexion{
     public Connection getConnection() {
       return conect;
     }
+    
+    public void guardarRegistros(String tabla, String camposTabla, String valoresCampo){
+        Cls_conexion conectar = new Cls_conexion();
+        Connection cone = conectar.getConnection();
+        try{
+            String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUE (" + valoresCampo +");";
+            Statement stmt;
+            stmt = cone.createStatement();
+            stmt.executeUpdate(sqlQueryStmt);
+            stmt.close();
+            cone.close();
+            System.out.println("Registro guardado correctamente!");
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
         public void actualizarEliminarRegistro(String tabla, String valoresCamposNuevos, String condicion) {
 
         Cls_conexion conectar = new Cls_conexion();
