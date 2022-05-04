@@ -35,11 +35,11 @@ public class Cls_conexion{
       return conect;
     }*/
     
-    public void guardarRegistros(String tabla, String camposTabla, String valoresCampo){
+    public void guardarRegistros(String tabla, String camposTabla, String valoresCampos){
         Cls_conexion conectar = new Cls_conexion();
         Connection cone = conectar.conexion();
         try{
-            String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUES (" + valoresCampo +");";
+            String sqlQueryStmt = "INSERT INTO" + tabla + "(" + camposTabla + ") VALUES (" + valoresCampos +");";
             Statement stmt;
             stmt = cone.createStatement();
             stmt.executeUpdate(sqlQueryStmt);
