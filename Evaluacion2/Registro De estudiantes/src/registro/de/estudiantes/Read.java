@@ -4,7 +4,6 @@
  */
 package registro.de.estudiantes;
 
-import Conexion.Cls_conexion;
 import java.sql.SQLException;
 
 
