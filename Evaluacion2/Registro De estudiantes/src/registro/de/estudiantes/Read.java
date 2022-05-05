@@ -16,7 +16,7 @@ public class Read {
         try {
             Cls_conexion mostrar = new Cls_conexion ();
             
-                String tabla = "tb_estudiante";
+                String tabla = "estudiante";
                 String camposTabla = "*";
                 String condicionBusqueda = "";
                 
