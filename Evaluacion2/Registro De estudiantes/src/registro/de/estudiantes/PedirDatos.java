@@ -12,17 +12,19 @@ import java.util.Scanner;
 public class PedirDatos {
     PedirDatos() throws SQLException{
         //PEDIR DATOS AL USUARIO
-        Scanner le = new Scanner(System.in);
+       
         Datos_Estudiantes Es = new Datos_Estudiantes();
         System.out.println("Datos del estudiante");
         
+        
+         Scanner le = new Scanner(System.in);
+       
+        
         System.out.println("Carnet del estudiante: ");
         Es.setCarnet_estudiante(le.nextInt());
-        
+        le.nextLine();
         System.out.println("Nombre del estudiante: ");
         Es.setNom_estudiante(le.nextLine());
-        le.nextLine();
-      
         
         System.out.println("Apellidos del estudiante: ");
         Es.setApe_estudiante(le.nextLine());
