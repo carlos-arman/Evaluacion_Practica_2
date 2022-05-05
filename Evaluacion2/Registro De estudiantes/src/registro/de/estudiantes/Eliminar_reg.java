@@ -12,23 +12,23 @@ public class Eliminar_reg {
     Eliminar_reg() throws SQLException{
         Scanner leer = new Scanner(System.in);
         Cls_conexion eliminar = new Cls_conexion ();
-        System.out.println("<< ELIMINAR REGISTRO >>");
+        System.out.println("<< ELIMINAR REGISTRO DE ESTUDIANTE >>");
         
-        System.out.println("Ingresar el id del registro");
+        System.out.println("Ingresar el id del Estudiante");
         String  idEstudianteEliminar = leer.next();
         String tabla = "estudiantes";
         String campos = "*";
         String condicion = "id_estudiante = " + idEstudianteEliminar ;
         eliminar.desplegarRegistros(tabla, campos, condicion);
         
-        System.out.println("Precione << A >> para comfirmar");
+        System.out.println("Precione << A >> para comfirmar: ");
         String confimarBorrar = leer.next();
         
         if("A".equals(confimarBorrar)){
             String valoresCamposNuevos = "";
             
             eliminar.actualizarEliminarRegistro(tabla, valoresCamposNuevos, condicion);
-            System.out.println("Registro borrado satisfactoriamente!");
+            System.out.println("Registro eliminado correctamente!");
         }
         CLASE_PRINCIPAL.MenuDesplegable();
     }
