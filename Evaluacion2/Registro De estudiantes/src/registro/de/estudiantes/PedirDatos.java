@@ -31,7 +31,7 @@ public class PedirDatos {
         Es.setEdad_estudiante(le.nextInt());
         
         String tabla = "estudiantes";
-        String camposTabla = "id_estudiante,carnet_estudiante,nom_estudiante,ape_estudiante,edad_estudiante";
+        String camposTabla = "carnet_estudiante,nom_estudiante,ape_estudiante,edad_estudiante";
         String valoresCampo = "'" + Es.getId_estudiante() + "," + Es.getCarnet_estudiante() + "','" + Es.getNom_estudiante() + "','" + Es.getApe_estudiante() + "','" + Es.getEdad_estudiante()+ "'";
         
         Cls_conexion con = new Cls_conexion();
