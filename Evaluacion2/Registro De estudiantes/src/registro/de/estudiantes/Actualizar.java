@@ -25,10 +25,10 @@ public class Actualizar {
         String camposBuscar = "id_estudiante, carnet_estudiante, nom_estudiante, ape_estudiante, edad_estudiante";
         String condicionBuscar = "id_estudiante = " + Es.getId_estudiante();
         cone.desplegarRegistros(tablaBuscar, camposBuscar, condicionBuscar);
-        
+        leer.nextLine();
         System.out.println("Carnet estudiante: ");
         Es.setCarnet_estudiante(leer.nextLine());
-        leer.nextLine();
+        
         System.out.println("Nombre estudiante: ");
         Es.setNom_estudiante(leer.nextLine());
      
