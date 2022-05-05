@@ -22,28 +22,27 @@ public class Actualizar {
         Es.setId_estudiante(leer.nextInt());
         
         String tablaBuscar = "estudiantes";
-        String camposBuscar = "id_estudiate, carnet_estudiante,nom_estudiante,ape_estudiante,edad_estudiante";
-        String Buscar = "id_estudiante" +Es.getId_estudiante();
+        String camposBuscar = "id_estudiante, carnet_estudiante, nom_estudiante, ape_estudiante, edad_estudiante";
+        String condicionBuscar = "id_estudiante = " + Es.getId_estudiante();
+        cone.desplegarRegistros(tablaBuscar, camposBuscar, condicionBuscar);
         
-        cone.desplegarRegistros(tablaBuscar, camposBuscar, camposBuscar);
-        
-        System.out.println("Carnet esdiante: ");
-        Es.setCarnet_estudiante(leer.nextInt());
-        
+        System.out.println("Carnet estudiante: ");
+        Es.setCarnet_estudiante(leer.nextLine());
+        leer.nextLine();
         System.out.println("Nombre estudiante: ");
         Es.setNom_estudiante(leer.nextLine());
-        
+     
         System.out.println("Apellidos del estudiante: ");
         Es.setApe_estudiante(leer.nextLine());
-        
+       
         System.out.println("Edad: ");
         Es.setEdad_estudiante(leer.nextInt());
         
         
         String tabla ="estudiantes";
-        String nuevosCampos = "'carnet_estudiante = '" + Es.getCarnet_estudiante() + "',nom_estudiante = '" + Es.getNom_estudiante()  + "',ape_estudiante = '" + Es.getApe_estudiante() + "'edad_estudiante=' "+ Es.getEdad_estudiante();
+        String nuevosCampos = "carnet_estudiante = '" + Es.getCarnet_estudiante() + "',nom_estudiante = '" + Es.getNom_estudiante()  + "',ape_estudiante = '" + Es.getApe_estudiante() + "',edad_estudiante=' "+ Es.getEdad_estudiante() + "'";
         
-        cone.actualizarEliminarRegistro(tabla, nuevosCampos, Buscar);
+        cone.actualizarEliminarRegistro(tabla, nuevosCampos, condicionBuscar);
         System.out.println("Modificado");
         
         CLASE_PRINCIPAL.MenuDesplegable();

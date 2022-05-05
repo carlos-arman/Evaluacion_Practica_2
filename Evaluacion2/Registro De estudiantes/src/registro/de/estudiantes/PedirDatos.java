@@ -21,8 +21,8 @@ public class PedirDatos {
        
         
         System.out.println("Carnet del estudiante: ");
-        Es.setCarnet_estudiante(le.nextInt());
-        le.nextLine();
+        Es.setCarnet_estudiante(le.nextLine());
+        
         System.out.println("Nombre del estudiante: ");
         Es.setNom_estudiante(le.nextLine());
         
@@ -39,5 +39,6 @@ public class PedirDatos {
         Cls_conexion con = new Cls_conexion();
         con.guardarRegistros(tabla, camposTabla, valoresCampo);
         CLASE_PRINCIPAL.MenuDesplegable();
+        
     }
 }
