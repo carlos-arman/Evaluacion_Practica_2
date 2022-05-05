@@ -38,7 +38,7 @@ public class CLASE_PRINCIPAL {
                 Actualizar actu = new Actualizar();
             }
             case "d": {
-                //eliminar_reg Delete delete = new eliminar_reg();
+                Eliminar_reg delete = new Eliminar_reg();
             }
             case "e": System.exit(0);
             default: System.out.println(" Seleccion invalida! ");
